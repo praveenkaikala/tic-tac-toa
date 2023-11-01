@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import "./App.css"
-import logo from './profile.png'
 import circle from './circle.png'
 import x from './x.png'
 import { useState } from 'react'
