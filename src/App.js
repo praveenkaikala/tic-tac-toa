@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import "./App.css"
 import circle from './circle.png'
 import x from './x.png'
@@ -24,7 +24,7 @@ const App = () => {
     if(lock){
       return 0;
     }
-   else if( count % 2 == 0 ){
+   else if( count % 2 === 0 ){
     e.target.innerHTML=`<img src=${x} alt="x"/>`
   data[num]="x"
     setcount(count+1)
@@ -37,35 +37,35 @@ const App = () => {
     checkwon();
   }
   const checkwon=()=>{
-    if(data[0]==data[1] && data[1]==data[2] && data[2]!="")
+    if(data[0]===data[1] && data[1]===data[2] && data[2]!=="")
     {
       won(data[1])
     }
-   else if(data[3]==data[4] && data[4]==data[5] && data[5]!="")
+   else if(data[3]===data[4] && data[4]===data[5] && data[5]!=="")
     {
       won(data[4])
     }
-    else if(data[6]==data[7] && data[7]==data[8] && data[8]!="")
+    else if(data[6]===data[7] && data[7]===data[8] && data[8]!=="")
     {
       won(data[7])
     }
-    else if(data[0]==data[3] && data[3]==data[6] && data[6]!="")
+    else if(data[0]===data[3] && data[3]===data[6] && data[6]!=="")
     {
       won(data[3])
     }
-    else if(data[1]==data[4] && data[4]==data[7] && data[7]!="")
+    else if(data[1]===data[4] && data[4]===data[7] && data[7]!=="")
     {
       won(data[4])
     }
-    else if(data[2]==data[5] && data[5]==data[8] && data[8]!="")
+    else if(data[2]===data[5] && data[5]===data[8] && data[8]!=="")
     {
       won(data[5])
     }
-    else if(data[0]==data[4] && data[4]==data[8] && data[8]!="")
+    else if(data[0]===data[4] && data[4]===data[8] && data[8]!=="")
     {
       won(data[4])
     }
-    else if(data[2]==data[4] && data[4]==data[6] && data[6]!="")
+    else if(data[2]===data[4] && data[4]===data[6] && data[6]!=="")
     {
       won(data[4])
     }
@@ -73,7 +73,7 @@ const App = () => {
   }
   const won=(winner)=>{
     setlock(true)
-    if(winner=="x"){
+    if(winner==="x"){
        title.current.innerHTML="X won"
        setx(xdata+1)
     }
@@ -89,6 +89,7 @@ const App = () => {
     setcount(0)
     boxes.map((e)=>{
       e.current.innerHTML=""
+      return 0
     })
   }
   return (
