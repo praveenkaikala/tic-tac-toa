@@ -1,0 +1,46 @@
+
+.box{
+  width: 70px;
+  height: 70px;
+  background-color: gray;
+ cursor: pointer;
+}
+img{
+  width: 100%;
+  height: 100%;
+object-fit:cover;
+background: transparent;
+mix-blend-mode: multiply;
+
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 20PX;
+}
+.container>p{
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+.board{
+  display: flex;
+  gap: 20PX;
+}
+button{
+ background-color: rgb(36, 90, 90);
+ border-radius: 10px;
+ color: aliceblue;
+ border: 1px solid black;
+ cursor: pointer;
+ height: 25px;
+}
+.score{
+  display: flex;
+  justify-content: space-around;
+}
+.score div{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
